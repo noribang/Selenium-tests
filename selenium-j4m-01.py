@@ -9,7 +9,7 @@ class J4MTest(unittest.TestCase):
 	def setUp(self):
 		self.driver = webdriver.Firefox()
 
-	def test_search_in_python_org(self):
+	def test_search_content_j4m(self):
 		driver = self.driver
 		# driver.get("http://www.python.org")
 		driver.get("http://www.jokes4miles.com/jokescontent?category")
