@@ -14,9 +14,12 @@ class J4MGetLinks(unittest.TestCase):
 
 		driver.get("http://www.jokes4miles.com")
 
+		for a in driver.find_elements_by_xpath('.//a'):
+			print(a.get_attribute('href'))
+
 	def tearDown(self):
 		time.sleep(5)
-		self.driver.close()
+		self.driver.quit()
 
 if __name__ == "__main__":
 	unittest.main()
