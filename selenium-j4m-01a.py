@@ -12,12 +12,9 @@ from selenium.webdriver.common.keys import Keys
 driver = webdriver.Chrome()
 # List of strings to test for content.
 contentList = ["tina fey", "pat tomasulo", "bill murray"]
-# Loop through list to check for content.
-# for i in contentList:
-
 # Counter
 i = 0
-# Loop through list.
+# Loop through list to check for content.
 while i < len(contentList):
     # Webdriver instance will navigate to URL that has been passed to get(). 
     driver.get("http://www.jokes4miles.com/jokescontent?category")
