@@ -11,11 +11,14 @@ class J4MGetLinks(unittest.TestCase):
 
 	def test_links(self):
 		driver = self.driver
-
 		driver.get("http://www.jokes4miles.com")
+
+		
 
 		for a in driver.find_elements_by_xpath('.//a'):
 			print(a.get_attribute('href'))
+			file = open("links.txt", "w")
+			file(a.get_attribute('href'))
 
 	def tearDown(self):
 		time.sleep(5)
